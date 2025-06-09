@@ -3,7 +3,7 @@ from requests.exceptions import RequestException, Timeout, ConnectionError
 import time
 import re
 from bs4 import BeautifulSoup
-from msphi3 import get_reponse
+
 
 def get_page_content(url, timeout=10, retries=3, delay=1):
     """
@@ -151,15 +151,3 @@ def get_clean_page_text(url, preserve_structure=True, timeout=10, retries=3, del
     return clean_text
 
 # Example usage
-if __name__ == "__main__":
-    try:
-        # Example usage - get clean text from a webpage
-        clean_text = get_clean_page_text("https://www.sheffield.ac.uk/cs/people/academic/nikos-aletras")
-        # print(clean_text[:5000])
-        resp = get_reponse("Extract information about the person from this text, I want their Name+Designation, email, university and department:\n"+clean_text[:5000])
-        print(resp)
-        # You can also clean existing HTML
-    
-        
-    except RequestException as e:
-        print(f"Error: {e}")
