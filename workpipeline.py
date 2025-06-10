@@ -2,6 +2,7 @@ from fetch_page import *
 from msphi3 import get_reponse
 import json 
 
+
 def dict_to_json(data_dict, file_path=None, indent=4):
     """
     Convert a Python dictionary to JSON format.
@@ -54,3 +55,4 @@ def extract_save_info(url):
 if __name__ == "__main__":
     url = "https://www.sheffield.ac.uk/cs/people/academic/nikos-aletras"
     extract_save_info(url)
+    
