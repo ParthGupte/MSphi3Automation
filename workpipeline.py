@@ -44,15 +44,18 @@ def extract_save_info(url):
         clean_text = get_clean_page_text(url)
         # print(clean_text[:5000])
         n = 5000
-        resp = get_reponse("Extract information about the researcher from this text. I want the following information in a dictionary,{'name':name with designation,'email':email address of the person,'university':name of the university,'department':name of department,'research':a small paragraph about their research}. Reply only with the dictionary written in a single line in python legal format nothing more.\n"+clean_text[:n])
+        resp = get_reponse("Extract information about the researcher from this text. I want the following information in a dictionary,{'name':name with designation,'email':email address of the person,'university':name of the university,'department':name of department,'research':a small paragraph about their research,'prospective_students':any information on the page about how procepective students should approach them}. Reply only with the dictionary written in a single line in python legal format nothing more.\n"+clean_text[:n])
         resp_dict = eval(resp.strip())
-        dict_to_json(resp_dict,"saved_json/test.json")
+        resp_dict["url"] = url
+        json_name = resp_dict["name"].replace(" ","")
+        dict_to_json(resp_dict,"saved_json/{}.json".format(json_name))
     
         
     except RequestException as e:
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    url = "https://www.sheffield.ac.uk/cs/people/academic/nikos-aletras"
-    extract_save_info(url)
+    url_lst = ["https://dadelani.github.io/","https://www.iro.umontreal.ca/~agrawal/","https://sarathchandar.in/","https://mila.quebec/en/directory/laurent-charlin","https://mila.quebec/en/directory/jackie-cheung","https://saebrahimi.github.io/"]
+    for url in url_lst:
+        extract_save_info(url)
     
