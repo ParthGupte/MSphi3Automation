@@ -1,7 +1,7 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-torch.random.manual_seed(0)
+# torch.random.manual_seed(0)
 model_id = "microsoft/Phi-3-mini-128k-instruct"
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
@@ -26,8 +26,8 @@ def get_reponse(prompt):
     generation_args = {
         "max_new_tokens": 500,
         "return_full_text": False,
-        "temperature": 0.0,
-        "do_sample": False,
+        "temperature": 0.3,
+        "do_sample": True,
     }
 
     output = pipe(messages, **generation_args)

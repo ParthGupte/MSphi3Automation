@@ -44,7 +44,7 @@ def extract_save_info(url):
         clean_text = get_clean_page_text(url)
         # print(clean_text[:5000])
         n = 5000
-        resp = get_reponse("Extract information about the researcher from this text. I want the following information in a dictionary,{'name':name with designation,'email':email address of the person,'university':name of the university,'department':name of department,'research':a small paragraph about their research,'prospective_students':any information on the page about how procepective students should approach them}. Reply only with the dictionary written in a single line in python legal format nothing more.\n"+clean_text[:n])
+        resp = get_reponse("""Extract information about the researcher from this text. I want the following information in a dictionary,{"name": "name with designation" ,"email": "email address of the person","university" : "name of the university","department": "name of department", "research": "a small paragraph about their research" ,"prospective_students" : "any information on the page about how procepective students should approach them"}. Do not use any quotes, single or double inside any of the strings in the dictionary. Reply only with the dictionary written in a single line in python legal format nothing more.\n"""+clean_text[:n])
         resp_dict = eval(resp.strip())
         resp_dict["url"] = url
         json_name = resp_dict["name"].replace(" ","")
@@ -55,7 +55,7 @@ def extract_save_info(url):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    url_lst = ["https://www.surrey.ac.uk/people/adrian-hilton","https://andreasvlachos.github.io//"]
+    url_lst = []
     for url in url_lst:
         extract_save_info(url)
     
