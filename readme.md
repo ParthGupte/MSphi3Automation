@@ -1,0 +1,1 @@
+This Project uses locally run MSphi3 model to process infromation from webpages. Specifically designed for extracting information about professors from thier webpages to help with PHd applications. Add as many pages as you want to the list in workpipeline.py and run. All the professors information will be stored in jsons. Then run csv_pipeline to store the jsons into a CSV. 
