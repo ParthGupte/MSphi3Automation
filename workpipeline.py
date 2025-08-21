@@ -55,7 +55,7 @@ def extract_save_info(url):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    url_lst = ["https://sites.google.com/view/sanjay-shakkottai/","https://www.cs.utexas.edu/people/faculty-researchers/kristen-grauman","https://www.cs.utexas.edu/people/faculty-researchers/david-harwath"]
+    url_lst = ["https://armancohan.com/","https://engineering.yale.edu/research-and-faculty/faculty-directory/smita-krishnaswamy","https://www.cs.yale.edu/homes/vishnoi/Home.html"]
     for url in url_lst:
         extract_save_info(url)
     
