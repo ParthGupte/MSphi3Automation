@@ -55,8 +55,9 @@ def extract_save_info(url):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    url_lst = ["https://people.eecs.berkeley.edu/~malik/"]
+    url_lst = []
     for url in url_lst:
+        print(url)
         extract_save_info(url)
 
 

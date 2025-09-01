@@ -1,0 +1,9 @@
+{
+    "name": "Ge Liu, Assistant Professor in Computer Science",
+    "email": "geliu@illinois.edu, geliu@csail.mit.edu",
+    "university": "University of Illinois at Urbana-Champaign",
+    "department": "Computer Science",
+    "research": "Develops scalable, reliable, and geometry-aware deep generative models and sequential optimization techniques for solving problems in synthetic biology, immunology, and molecular biology, with a focus on geometric DL and multi-modal flow matching & diffusion methods for computational design of functional and therapeutic molecules.",
+    "prospective_students": "Actively looking for highly-motivated Ph.D. students and interns to work on problems in the exciting frontiers of ML and AI4Science, particularly interested in functional biological molecule design, drug discovery, and solving complex guided and conditional generation tasks and inverse problems with diffusion/FM prior.",
+    "url": "https://www.mit.edu/~geliu/"
+}
