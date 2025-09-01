@@ -1,0 +1,9 @@
+{
+    "name": "Dan Klein, Professor of Computer Science",
+    "email": "dan@cs.berkeley.edu",
+    "university": "University of California at Berkeley",
+    "department": "Computer Science Division",
+    "research": "My research focuses on the automatic organization of natural language information. Some topics of interest to me are: Unsupervised language acquisition Machine translation Efficient algorithms for NLP Information extraction Linguistically rich models of language Integrating symbolic and statistical methods for NLPHistorical linguistics My group is the Berkeley Natural Language Processing Group.",
+    "prospective_students": "I teach cs188, the undergraduate introduction to artificial intelligence here at Berkeley, which I have been actively developing since 2006. We are now offering cs188x, a free online version of cs188 (joint with Pieter Abbeel). The cs188 projects we developed are available for use by other instructors -- see here (with John DeNero). Statistical NLP: At the graduate level, I teach cs288, the statistical NLP course here at Berkeley. Tutorials: My tutorials are below, in the publication list.",
+    "url": "https://people.eecs.berkeley.edu/~klein/"
+}
